@@ -1,0 +1,148 @@
+body {
+  background-image: url('../imagenes/fondo_principal.jpg'); /* ajusta la ruta según tu carpeta */
+  background-size: cover;         /* Para que cubra toda la pantalla */
+  background-repeat: no-repeat;   /* Que no se repita */
+  background-position: center;    /* Centrada */
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+* {
+  cursor: url('../imagenes/Wand.cur'), default;
+}
+
+.contenido {
+  background-color: rgba(255, 255, 255, 0.7); /* blanco semitransparente */
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(227, 227, 227, 0.2);
+}
+
+
+
+main {
+    text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+nav {
+  margin-top: -10px; /* Ajusta el valor según necesites */
+}
+
+header {
+    background-color: rgba(225, 225, 225, 0.5);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 80px;
+    margin-right: 15px;
+}
+
+nav a {
+    display: inline-block;
+  margin: 0 10px;
+  padding: 8px 15px;
+  background-color: rgba(225, 225, 225, 0.5); /* Blanco con transparencia */
+  color: #4B2D01; /* Marrón oscuro */
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px; /* Bordes redondeados */
+  border: 2px solid #9e6816; /* Aquí agregamos el borde marrón */
+  transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  transform: translateY(-2px);
+  border-color: #2f1b00;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: gold;
+}
+
+.seccion-imagen-final h2,
+.seccion-imagen-final p {
+  font-family: 'Cinzel Decorative', cursive;
+  color: white;
+}
+
+.seccion-imagen-final p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.imagen-destello {
+  width: 300px; /* Aumentado desde 250px */
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.imagen-destello:hover {
+  transform: scale(1.2); /* Se agranda más */
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.9); /* Más brillo */
+  border-color: white; /* Borde blanco al hacer hover */
+  cursor: pointer;
+}
+
+.seccion-imagen-final {
+  background-color: transparent (255, 255, 255, 0.7); /* Fondo claro para contraste */
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.seccion-imagen-final h2,
+.seccion-imagen-final p {
+  color: black !important;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.info-desprendida {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  background-color: transparent(255, 255, 255, 0.85);
+  margin: 10px auto 0 auto;
+  padding: 0 15px;
+  border-left: 5px solid #6b4c2b;
+  border-radius: 8px;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
+  text-align: left;
+}
+
+.info-desprendida.open {
+  max-height: 500px; /* Ajusta según contenido */
+  padding: 15px;
+}

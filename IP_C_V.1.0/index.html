@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bienvenidos a Hogwarts</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap y Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="css/estilosIdx.css" />
+
+</head>
+<body>
+
+  <header>
+    <img src="imagenes/Hogwarts-Emblem.png" alt="Logo" />
+    <nav>
+      <a href="index.html"><i class="bi bi-house-fill"></i> Inicio</a>
+      <a href="templates/pagina1.html"><i class="bi bi-shield-fill"></i> Historia</a>
+      <a href="templates/pagina2.html"><i class="bi bi-bookmark-fill"></i> Casas</a>
+      <a href="templates/pagina3.html"><i class="bi bi-mortarboard-fill"></i> Listado</a>
+      
+    </nav>
+  </header>
+
+  <!-- LOGO OCULTO DE SORTILEGIOS WEASLEY -->
+  <a href="../SortilegiosWeasley/index.html" id="logoSortilegios" title="Ir a Sortilegios Weasley" style="opacity: 0;">
+  <img src="imagenes/Logo2.png" alt="Sortilegios Weasley" />
+  </a>
+
+  <main>
+    <section id="bienvenida">
+      <h1>Bienvenidos a Hogwarts</h1>
+      <p>Magia y hechicería.</p>
+      <img src="imagenes/Emble-transparencia.png" alt="Imagen decorativa" width="500" />
+    </section>
+
+    <section id="noticias">
+      <div class="cuadro-transparente">
+        <h1 style="font-family: 'Cinzel Decorative', serif; text-align: center;">Últimas noticias</h1>
+        <p style="font-family: 'Cinzel Decorative', serif; text-align: center;">Descubre las últimas novedades del mundo mágico</p>
+        <h1 style="font-family: 'Cinzel Decorative', serif; text-align: center;">📰 El Profeta</h1>
+
+        <div id="noticiasCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+          <div class="carousel-inner">
+
+            <!-- Noticia 1 -->
+            <div class="carousel-item active">
+              <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                  <h3 style="font-family: 'Cinzel Decorative', serif; text-align: center;">
+                    Liberación histórica de los elfos domésticos
+                  </h3>
+                  <p
+                    class="fecha"
+                    style="font-size: 14px; font-family: 'Poppins', sans-serif; text-align: right"
+                  >
+                    Hogwarts, 16 de junio
+                  </p>
+                  <p style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    En un giro sin precedentes para el mundo mágico británico, el Ministerio de Magia ha aprobado la
+                    <strong>Ley de Libertad y Protección para los Elfos Domésticos</strong>, una iniciativa impulsada por
+                    el Departamento de Regulación y Control de Criaturas Mágicas y la organización
+                    <strong>P.E.D.D.O.</strong>, fundada por Hermione Granger.
+                  </p>
+                  <p style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    La ceremonia de firma tuvo lugar esta mañana en los terrenos del Colegio Hogwarts, donde más de 50
+                    elfos domésticos, entre ellos el conocido <em>Kreacher</em>, asistieron con emoción. La ley garantiza el
+                    derecho a la vestimenta libre, compensación justa y el rechazo de tareas degradantes.
+                  </p>
+                  <blockquote style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    "Durante siglos han servido en las sombras. Hoy, les damos la luz que siempre han merecido" —
+                    <strong>Hermione Granger</strong>, Ministra de Magia
+                  </blockquote>
+                  <p style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    En Hogwarts, los elfos podrán ahora optar por contratos mágicos, beneficios y días de descanso. Aunque
+                    algunas familias tradicionales se han manifestado en contra, la comunidad internacional ha aplaudido el
+                    avance.
+                  </p>
+                  <p style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    Esta ley marca un hito en la historia mágica, y representa un nuevo comienzo para aquellos que durante
+                    siglos fueron invisibles.
+                  </p>
+                </div>
+                <div class="col-md-6 text-center">
+                  <img
+                    src="imagenes/Elfos.webp"
+                    alt="Elfos"
+                    class="img-fluid"
+                    style="max-width: 400px; border-radius: 8px"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Noticia 2 -->
+            <div class="carousel-item">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <h3 style="font-family: 'Cinzel Decorative', serif; text-align: center;">Hogsmeade celebra el Festival de Invierno</h3>
+                  <p class="fecha" style="font-size: 14px; font-family: 'Poppins', sans-serif; text-align: right">
+                    Hogsmeade, 17 de junio
+                  </p>
+                  <p style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    Hogsmeade se vistió de gala este fin de semana con el esperado <strong>Festival de Invierno</strong>, una
+                    tradición que reúne a magos y brujas de toda Escocia.
+                  </p>
+                  <blockquote style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    Las calles del único pueblo enteramente mágico se llenaron de luces encantadas, música y puestos repletos de dulces de
+                    <strong>Honeydukes</strong> y objetos curiosos de <strong>Zonko’s</strong>. El evento principal fue el
+                    <strong>Desfile de Escobas Iluminadas</strong>, donde jóvenes magos surcaron el cielo dejando estelas brillantes a su paso.
+                  </blockquote>
+                  <p style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    La jornada concluyó con fuegos artificiales mágicos y la promesa de que, año tras año, Hogsmeade seguirá siendo el lugar donde la magia del invierno cobra vida.
+                  </p>
+                </div>
+                <div class="col-md-6 text-center">
+                  <img
+                    src="imagenes/hogsmade.gif"
+                    class="img-fluid"
+                    style="max-width: 400px; border-radius: 8px"
+                    alt="Festival de Invierno"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Noticia 3 -->
+            <div class="carousel-item">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <h3 style="font-family: 'Cinzel Decorative', serif; text-align: center;">Nuevo director de Hogwarts anunciado</h3>
+                  <p class="fecha" style="font-size: 14px; font-family: 'Poppins', sans-serif; text-align: right">
+                    Hogwarts, 18 de junio
+                  </p>
+                  <p style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    En una conferencia mágica esta mañana, el Ministerio de Magia anunció la designación de
+                    <strong>Minerva McGonagall</strong> como la nueva directora de Hogwarts, en sustitución de Albus Dumbledore.
+                  </p>
+                  <blockquote style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    "Comprometida con la excelencia académica y la protección de nuestros estudiantes, la Profesora McGonagall traerá una nueva era a Hogwarts." —
+                    <strong>Ministro de Magia</strong>
+                  </blockquote>
+                  <p style="font-size: 14px; font-family: 'Poppins', sans-serif">
+                    La comunidad escolar ha recibido con entusiasmo la noticia, anticipando innovaciones en el currículo y nuevas medidas para la seguridad.
+                  </p>
+                </div>
+                <div class="col-md-6 text-center">
+                  <img
+                    src="imagenes/mcgonagall.jpg"
+                    alt="Minerva McGonagall"
+                    class="img-fluid"
+                    style="max-width: 400px; border-radius: 8px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#noticiasCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#noticiasCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4 mt-4">
+    <p>Síguenos en nuestras redes sociales:</p>
+    <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+    <a href="#"><i class="bi bi-twitter-x"></i> X</a>
+    <a href="#"><i class="bi bi-facebook"></i> Facebook</a>
+    <a href="mailto:contacto@hogwarts.edu"><i class="bi bi-envelope-fill"></i> the.wizards@owlmail.uk</a>
+  </footer>
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <!-- JS para mostrar logo al mover mouse -->
+  <script>
+    const logo = document.getElementById('logoSortilegios');
+    let visible = false;
+
+    window.addEventListener('mousemove', () => {
+      if (!visible) {
+        logo.style.opacity = '1';
+        visible = true;
+      }
+      // Opcional: para que vuelva a ocultarse luego de unos segundos sin mover el mouse
+      clearTimeout(logo.timeoutId);
+      logo.timeoutId = setTimeout(() => {
+        logo.style.opacity = '0';
+        visible = false;
+      }, 3000);
+    });
+
+    logo.addEventListener('click', () => {
+      window.location.href = '../SortilegiosWeasley/index.html';
+    });
+  </script>
+</body>
+</html>

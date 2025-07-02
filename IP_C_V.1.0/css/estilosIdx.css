@@ -1,0 +1,179 @@
+body {
+  background-image: url('../imagenes/fondo_principal.jpg'); /* ajusta la ruta según tu carpeta */
+  background-size: cover;         /* Para que cubra toda la pantalla */
+  background-repeat: no-repeat;   /* Que no se repita */
+  background-position: center;    /* Centrada */
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+* {
+  cursor: url('../imagenes/Wand.cur'), default;
+}
+
+#logoSortilegios {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 9999;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 150, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logoSortilegios.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#logoSortilegios img {
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 8px;
+}
+
+/* Animación de flotación para la imagen de bienvenida */
+#bienvenida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh; /* O 100vh si quieres que ocupe toda la pantalla */
+  padding: 20px;
+}
+
+#bienvenida img {
+  animation: flotando 3s ease-in-out infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+@keyframes flotando {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+#bienvenida img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2) drop-shadow(0 0 10px rgb(164, 111, 7));
+  cursor: pointer;
+}
+
+#noticias .carousel-item {
+  padding: 20px 0;
+}
+
+#noticias h2, #noticias h3 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: #4B2D01; /* Marrón oscuro */
+  text-align: center;
+}
+
+#noticias .fecha {
+  color: #2f1b00;
+  font-family: 'Poppins', sans-serif;
+  text-align: right;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
+
+.cuadro-transparente {
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco semitransparente */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  margin-top: -10px; /* Ajusta el valor según necesites */
+}
+
+header {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 70px;
+    margin-right: 15px;
+}
+
+nav a {
+   display: inline-block;
+  margin: 0 10px;
+  padding: 8px 15px;
+  background-color: rgba(225, 225, 225, 0.5); /* Blanco con transparencia */
+  color: #4B2D01; /* Marrón oscuro */
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px; /* Bordes redondeados */
+  border: 2px solid #9e6816; /* Aquí agregamos el borde marrón */
+  transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  transform: translateY(-2px);
+  border-color: #2f1b00;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+} 
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: gold;
+}
+
+/* Separar los botones de control del carrusel hacia los lados */
+.carousel-control-prev {
+  left: -110px; /* Puedes ajustar a -60px si quieres más separación */
+}
+
+.carousel-control-next {
+  right: -110px;
+}
+
+/* Estética de los íconos de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}

@@ -1,0 +1,139 @@
+body {
+  background-image: url('../imagenes/fondo_principal.jpg'); /* ajusta la ruta según tu carpeta */
+  background-size: cover;         /* Para que cubra toda la pantalla */
+  background-repeat: no-repeat;   /* Que no se repita */
+  background-position: center;    /* Centrada */
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+* {
+  cursor: url('../imagenes/Wand.cur'), default;
+}
+
+.contenido {
+  background-color: rgba(255, 255, 255, 0.7); /* blanco semitransparente */
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(227, 227, 227, 0.2);
+}
+
+.alineado {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.alineado img {
+  max-width: 250px;
+  height: auto;
+    border-radius: 8px;
+}
+
+.texto-alineado {
+  max-width: 700px;
+  text-align: justify;
+  font-family: Poppins, sans-serif;
+}
+
+.resto {
+  max-width: 960px;
+  text-align: justify;
+  font-family: Poppins, sans-serif;
+}
+
+.lema {
+  max-width: 960px;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+
+/* Estilos para la imagen del mapa */
+.mapa img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+  cursor: url('../imagenes/cursor.cur'), auto;
+}
+
+.mapa img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  filter: brightness(1.1) saturate(1.2);
+  border: 3px solid #9e6816; /* un borde dorado */
+  cursor: url('../imagenes/cursor.cur'), auto;
+
+}
+
+
+main {
+    text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+nav {
+  margin-top: -10px; /* Ajusta el valor según necesites */
+}
+
+header {
+    background-color: rgba(225, 225, 225, 0.5);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 80px;
+    margin-right: 15px;
+}
+
+nav a {
+    display: inline-block;
+  margin: 0 10px;
+  padding: 8px 15px;
+  background-color: rgba(225, 225, 225, 0.5); /* Blanco con transparencia */
+  color: #4B2D01; /* Marrón oscuro */
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px; /* Bordes redondeados */
+  border: 2px solid #9e6816; /* Aquí agregamos el borde marrón */
+  transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  transform: translateY(-2px);
+  border-color: #2f1b00;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: gold;
+}
