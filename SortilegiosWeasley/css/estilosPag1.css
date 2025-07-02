@@ -1,0 +1,240 @@
+body {
+  background-image: url('../imagenes/Sortilegios.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Poppins', sans-serif;
+  color: #4B2D01;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel Decorative', cursive;
+  animation: textGlow 3s infinite alternate;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px #ffd700;
+  }
+  50% {
+    text-shadow: 0 0 15px #fffacd;
+  }
+}
+
+/* Cursor personalizado de varita mágica */
+* {
+  cursor: url('../imagenes/Wand.cur'), auto;
+}
+
+header {
+  background-color: rgba(225, 225, 225, 0.8);
+  color: #4B2D01;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 0 0 15px 15px;
+}
+
+header img {
+  height: 70px;
+  margin-right: 20px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 0;
+}
+
+nav a {
+  padding: 8px 15px;
+  color: #4B2D01;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+  border: none;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  transform: translateY(-2px);
+  border: 2px solid #9e6816;
+  color: #4B2D01;
+  animation: sparkle 1.5s infinite alternate;
+}
+
+nav a:active {
+  box-shadow: 0 0 20px 5px #ffd700;
+  transition: box-shadow 0.3s ease-out;
+}
+
+@keyframes sparkle {
+  0%, 100% { box-shadow: 0 0 8px #ffd700, 0 0 12px #ffec8b; }
+  50% { box-shadow: 0 0 15px #fffacd, 0 0 20px #fffacd; }
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 2rem auto;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #9e6816;
+}
+
+.contenido {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  padding: 40px 50px;
+  max-width: 1100px;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contenido img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+label {
+  font-weight: 600;
+}
+
+.btn-magico {
+  background: linear-gradient(45deg, #9e6816, #ffd700);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 0;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  text-shadow: 0 0 8px #ffd700;
+  box-shadow: 0 0 10px #9e6816, 0 0 20px #ffd700;
+  cursor: url('../imagenes/Wand.cur'), auto;
+  transition: all 0.4s ease;
+  letter-spacing: 1.2px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-magico:hover {
+  background: #ffd700;
+  color: #4B2D01;
+  box-shadow: 0 0 15px #fff700, 0 0 25px #ffd700, 0 0 40px #fff700;
+  transform: scale(1.05);
+}
+
+.btn-magico:hover::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  border-radius: 30px;
+  box-shadow:
+    0 0 8px #fffacd,
+    0 0 12px #fffacd,
+    0 0 20px #ffd700,
+    0 0 30px #ffec8b;
+  animation: sparkle 1s infinite alternate;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+@keyframes sparkle {
+  0% {
+    box-shadow:
+      0 0 8px #fffacd,
+      0 0 12px #fffacd,
+      0 0 20px #ffd700,
+      0 0 30px #ffec8b;
+  }
+  100% {
+    box-shadow:
+      0 0 12px #fffacd,
+      0 0 16px #fffacd,
+      0 0 25px #ffd700,
+      0 0 40px #ffec8b;
+  }
+}
+
+.btn-magico:active {
+  box-shadow: 0 0 20px 5px #ffd700;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.form-check-input:checked {
+  accent-color: #ffd700;
+  box-shadow: 0 0 8px #ffd700;
+  cursor: url('../imagenes/Wand.cur'), auto;
+}
+
+.form-control:focus {
+  border-color: #9e6816;
+  box-shadow: 0 0 8px 2px #ffd700;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+footer a {
+  color: white;
+  margin: 0 15px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: gold;
+  text-decoration: underline;
+}
+
+/* Estilo de chispa mágica */
+nav a:hover, .btn-magico:hover {
+  box-shadow: 0 0 8px #ffd700, 0 0 12px #ffec8b;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,353 @@
+body {
+  background-image: url('../imagenes/Sortilegios.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  color: #4B2D01;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel Decorative', cursive;
+}
+/* Cursor personalizado de varita mágica */
+* {
+  cursor: url('../imagenes/Wand.cur'), auto;
+}
+
+#texto-hechizo {
+  color: #d98e0b; /* Amarillo dorado */
+  font-weight: bold;
+}
+
+#descripcion-hechizo {
+  color: #b16225 !important;
+  font-style: italic;
+}
+
+#horrocrux {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  display: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#area-juego {
+  position: relative;
+  width: 900px;
+  height: 400px !important;  /* fuerza la altura, úsalo sólo para pruebas */
+  background-image: url('../imagenes/Ma.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #9e6816;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#fuegosArtificiales {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;      /* cubrir todo el ancho de la ventana */
+  height: 100vh;     /* cubrir toda la altura de la ventana */
+  pointer-events: none;
+  z-index: 9999;
+  background: transparent !important;
+  margin: 0;          /* quitar margen */
+  padding: 0;         /* quitar padding */
+  display: block;     /* evitar que canvas se comporte como inline */
+}
+
+.titulo-magico {
+  animation: brillo-magico 3s ease-in-out infinite;
+  text-shadow:
+    0 0 10px #d4af37,
+    0 0 20px #ffd700,
+    0 0 30px #ffec8b;
+}
+
+@keyframes brillo-magico {
+  0%, 100% {
+    text-shadow:
+      0 0 10px #d4af37,
+      0 0 20px #ffd700,
+      0 0 30px #ffec8b;
+  }
+  50% {
+    text-shadow:
+      0 0 20px #fffacd,
+      0 0 40px #fffacd,
+      0 0 60px #fffacd;
+  }
+}
+
+button, .btn-magico {
+  background-color: #9e6816;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-family: 'Cinzel Decorative', cursive;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 5px #9e6816;
+}
+
+button:hover, .btn-magico:hover {
+  background-color: #ffd700;
+  color: #4B2D01;
+  box-shadow: 0 0 15px #ffec8b;
+  transform: scale(1.05);
+}
+
+#bienvenida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centra horizontalmente */
+  justify-content: center;   /* centra verticalmente */
+  text-align: center;
+  min-height: 80vh;
+  padding: 20px;
+  gap: 20px;                 /* espacio entre texto e imagen */
+}
+
+#bienvenida img {
+  max-width: 100%;           /* que la imagen no se salga del contenedor */
+  height: auto;              /* mantiene proporción */
+  margin: 0 auto;            /* centra en caso que no sea flex */
+  animation: flotando 3s ease-in-out infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Título con animación de brillo */
+.titulo-magico {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3.5rem;
+  color: #9e6816;
+  text-shadow:
+    0 0 10px #d4af37,
+    0 0 20px #ffd700,
+    0 0 30px #ffec8b;
+  animation: brillo-magico 3s ease-in-out infinite;
+  user-select: none;
+}
+
+.contenido {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  padding: 40px 50px;    /* Aquí defines el espacio interno */
+  max-width: 1100px;      /* Ancho máximo */
+  margin: 40px auto;     /* Margen arriba y abajo y centrado horizontal */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contenido img {
+  max-width: 300px; /* o el tamaño que quieras fijo o máximo */
+  height: auto;     /* mantiene proporción */
+  display: block;
+  margin: 0 auto;   /* centra la imagen si quieres */
+  object-fit: contain; /* para que mantenga el contenido sin deformar */
+}
+
+@keyframes brillo-magico {
+  0%, 100% {
+    text-shadow:
+      0 0 10px #d4af37,
+      0 0 20px #ffd700,
+      0 0 30px #ffec8b;
+  }
+  50% {
+    text-shadow:
+      0 0 20px #fffacd,
+      0 0 40px #fffacd,
+      0 0 60px #fffacd;
+  }
+}
+
+/* Animación para destellos flotantes en el header (opcional) */
+header {
+   background-color: rgba(225, 225, 225, 0.8);
+  color: #4B2D01;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 0 0 15px 15px;
+}
+
+header img {
+  height: 70px;
+  margin-right: 20px;
+}
+
+/* Nav y enlaces */
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 0;
+}
+
+nav a {
+  padding: 8px 15px;
+  color: #4B2D01;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+  border: none;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  transform: translateY(-2px);
+  border: 2px solid #9e6816;
+  color: #4B2D01;
+}
+
+/* Sección Últimos Sortilegios */
+#ultimos-sortilegios h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: #9e6816;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px #ffec8b;
+}
+
+.sortilegio-card {
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(164, 111, 7, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.sortilegio-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 35px #ffec8b;
+}
+
+/* Cuadro semitransparente para secciones */
+.cuadro-transparente {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(164, 111, 7, 0.4);
+}
+
+/* Formulario mágico */
+#cuestionario-magico h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: #9e6816;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #ffd700;
+}
+
+#resultado-identidad {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #4B2D01;
+  font-weight: 600;
+  text-align: center;
+  min-height: 2em;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+footer a {
+  color: white;
+  margin: 0 15px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: gold;
+  text-decoration: underline;
+}
+
+/* Estilo de chispa mágica */
+nav a:hover, .btn:hover {
+  box-shadow: 0 0 8px #ffd700, 0 0 12px #ffec8b;
+}
+
+/* Modo Oscuro */
+body.modo-oscuro {
+  background-color: #2d0c4a;
+  color: #8830f4;
+}
+body.modo-oscuro .contenido,
+body.modo-oscuro .cuadro-transparente {
+  background-color: rgba(37, 3, 93, 0.5);
+  color: #8830f4;
+}
+body.modo-oscuro header {
+  background-color: rgba(37, 3, 93, 0.5);
+  color: #fff;
+}
+body.modo-oscuro footer {
+  background-color: rgba(37, 3, 93, 0.5);
+}
+body.modo-oscuro nav a {
+  color: #8830f4;
+}
+
+.modo-oscuro .titulo-magico {
+  color: #000000; /* amarillo dorado brillante */
+  text-shadow: 0 0 15px #ffffff, 0 0 30px #ffea75; /* brillo más fuerte y claro */
+}
+
+.modo-oscuro #cuestionario-magico h2 {
+  color: #000000; /* amarillo dorado */
+  text-shadow: 0 0 12px #ffffff, 0 0 20px #ffea75;
+}
+
+body.modo-oscuro #ultimos-sortilegios h2 {
+  color: #000000;
+  text-shadow: 0 0 12px #ffffff, 0 0 20px #ffea75;
+}

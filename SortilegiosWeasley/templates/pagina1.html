@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pedidos - Sortilegios Weasley</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap y Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="../css/estilosPag1.css" />
+</head>
+<body>
+  <header class="d-flex align-items-center justify-content-between p-3">
+    <img src="../imagenes/Logo.png" alt="Logo" style="height: 60px;" />
+    <nav>
+      <a href="../index.html" class="me-3 text-decoration-none text-dark"><i class="bi bi-house-fill"></i> Inicio</a>
+      <a href="pedidos.html" class="text-decoration-none text-dark"><i class="bi bi-card-checklist"></i> Pedidos</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contenido">
+      <h1>Formulario de Pedidos</h1>
+      <form id="formularioMagico" autocomplete="off" novalidate>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre completo" required />
+          <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="colegio" class="form-label">¿A qué colegio perteneces?</label>
+          <select id="colegio" class="form-select" required>
+            <option value="">Selecciona tu colegio mágico...</option>
+            <option value="Hogwarts">Hogwarts</option>
+            <option value="Beauxbatons">Beauxbatons</option>
+            <option value="Durmstrang">Durmstrang</option>
+            <option value="Ilvermorny">Ilvermorny</option>
+          </select>
+        </div>
+
+        <div class="mb-3" id="grupo-casa">
+          <label for="casa" class="form-label">¿A qué casa perteneces?</label>
+          <select id="casa" class="form-select" required>
+            <option value="">Selecciona una casa...</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico:</label>
+          <input type="email" id="email" name="correo" class="form-control" placeholder="correo@ejemplo.com" required />
+          <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="articulo" class="form-label">Artículo a pedir:</label>
+          <select id="articulo" class="form-select" required>
+            <option value="">Selecciona un artículo</option>
+            <option value="Caramelo longuilinguo">Caramelo longuilinguo</option>
+            <option value="Galletas de canarios">Galletas de canarios</option>
+            <option value="Salvajes magifuegos Weasley">Salvajes magifuegos Weasley</option>
+            <option value="Magicaja básica">Magicaja básica</option>
+            <option value="Deflagración deluxe">Deflagración deluxe</option>
+            <option value="Orejas extensibles">Orejas extensibles</option>
+            <option value="Pantano portátil">Pantano portátil</option>
+            <option value="Sombreros acéfalos">Sombreros acéfalos</option>
+            <option value="Surtidos Saltaclases">Surtidos Saltaclases</option>
+            <option value="Bombones desmayo">Bombones desmayo</option>
+            <option value="Pastillas vomitivas">Pastillas vomitivas</option>
+            <option value="Turrón sangranarices">Turrón sangranarices</option>
+            <option value="Caramelo de la fiebre">Caramelo de la fiebre</option>
+            <option value="Manantial de sangre">Manantial de sangre</option>
+            <option value="Varitas falsas">Varitas falsas</option>
+            <option value="Caramelos de la verdad">Caramelos de la verdad</option>
+            <option value="Chocolate rompedientes">Chocolate rompedientes</option>
+            <option value="Libro mordedor">Libro mordedor</option>
+            <option value="Pergamino inservible">Pergamino inservible</option>
+            <option value="Pluma invisible">Pluma invisible</option>
+            <option value="Spray aumenta todo">Spray aumenta todo</option>
+            <option value="Varitas del revés">Varitas del revés</option>
+            <option value="Fantasías patentadas">Fantasías patentadas</option>
+            <option value="Marcas Tenebrosas comestibles">Marcas Tenebrosas comestibles</option>
+            <option value="Sombreros, capas y guantes escudo">Sombreros, capas y guantes escudo</option>
+            <option value="Polvo peruano de oscuridad instantánea">Polvo peruano de oscuridad instantánea</option>
+            <option value="Detonadores trampa">Detonadores trampa</option>
+            <option value="Puffskeins pigmeos">Puffskeins pigmeos</option>
+            <option value="Pociones de amor">Pociones de amor</option>
+            <option value="Lord Kakadura">Lord Kakadura</option>
+          </select>
+
+          <div class="invalid-feedback">Selecciona un artículo válido.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="cantidad" class="form-label">Cantidad:</label>
+          <input type="number" id="cantidad" class="form-control" min="1" max="10" value="1" required />
+          <div class="invalid-feedback">Ingresa una cantidad válida (1-10).</div>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" id="confirmoMagia" class="form-check-input" required />
+          <label for="confirmoMagia" class="form-check-label">No soy muggle, ¡Confirmo que soy mago!</label>
+          <div class="invalid-feedback">Debes confirmar que eres mago para enviar el pedido.</div>
+        </div>
+
+
+        <button type="submit" class="btn btn-magico w-100">Enviar Pedido</button>
+      </form>
+
+      <div id="mensaje-pedido" class="mt-4 text-center fw-bold"></div>
+
+        <!-- Puedes añadir aquí el resto del formulario -->
+      </form>
+
+      <div id="mensaje-pedido" class="mt-4 text-center fw-bold"></div>
+    </div>
+  </main>
+
+  <footer class="text-center py-3">
+    <p>&copy; 2025 Sortilegios Weasley. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <!-- JavaScript del formulario -->
+   <script src="../js/validacionFormulario.js"></script>.
+  <script src="../js/formulario-pedidos.js" defer></script>
+  
+</body>
+</html>
